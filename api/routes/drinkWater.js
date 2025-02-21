@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const { notifyTelexChannel } = require("../controllers/telexController");
+const { sendTelexReminder } = require("../controllers/telexReminder")
 const { getHydrationMessage } = require("../controllers/hydrationController");
 const { sendHydrationEmail } = require("../utils/mailjetClient");
 
@@ -23,6 +24,11 @@ router.post("/", async (req, res) => {
   const { message, sendReminder } = getHydrationMessage();
   if (!sendReminder) {
     return res.status(200).json({ message: "Not yet!" });
+  }
+
+  if (payload.return_url){
+    const channelUrl = payload.return_url;
+    sendTelexReminder(channelUrl)
   }
   
   sendHydrationEmail(userEmail, message)
