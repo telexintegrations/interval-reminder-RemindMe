@@ -33,12 +33,6 @@
     ],
     "settings": [
       {
-        "label": "User Email",
-        "type": "text",
-        "required": true,
-        "default": ""
-      },
-      {
         "label": "interval",
         "type": "text",
         "required": true,

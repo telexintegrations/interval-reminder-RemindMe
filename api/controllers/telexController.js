@@ -1,8 +1,8 @@
-async function notifyTelexChannel() {
+async function notifyTelexChannel(channelId) {
   const url = "https://ping.telex.im/v1/webhooks/019527bc-0d17-733a-b8a4-73eec1f9f5ed";
   const data = {
     event_name: "Ping to RemindME",
-    message: "PING from Telex to RemindME successfully",
+    message: `PING from Telex channel - ${channelId} to RemindME successfully`,
     status: "success",
     username: "RemindME"
   };
