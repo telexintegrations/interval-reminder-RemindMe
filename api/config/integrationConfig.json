@@ -39,7 +39,7 @@
         "default": "0 * * * *"
       }
     ],
-    "target_url": "https://interval-reminder-remindme.onrender.com//time",
+    "target_url": "https://interval-reminder-remindme.onrender.com/time",
     "tick_url": "https://interval-reminder-remindme.onrender.com/drink-water"
   }
 }
