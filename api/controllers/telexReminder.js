@@ -1,7 +1,7 @@
 async function sendTelexReminder(channelUrl, message) {
   const url = channelUrl;
   const data = {
-    event_name: "Reminder",
+    event_name: "Reminder - Drink water",
     message: message,
     status: "success",
     username: "RemindME"
