@@ -11,6 +11,7 @@ router.post("/", async (req, res) => {
   }
   if (payload.channel_id){
     const channelId = payload.channel_id
+    console.log(channelId)
     await notifyTelexChannel(channelId);
   }
 

@@ -8,7 +8,7 @@
       "app_name": "RemindME",
       "app_description": "An integration that uses intervals to remind users to drink water",
       "app_logo": "https://res.cloudinary.com/dj5wh1pcv/image/upload/v1739879962/tggod5mvodlse0tonf4f.svg",
-      "app_url": "https://interval-reminder-remindme.onrender.com/",
+      "app_url": "https://be-stage-3.vercel.app/",
       "background_color": "#FFFFFF"
     },
     "is_active": true,
@@ -37,9 +37,19 @@
         "type": "text",
         "required": true,
         "default": "0 * * * *"
+      },
+      {
+        "label": "Reminder type",
+        "type": "dropdown",
+        "required": true,
+        "default": "Standard",
+        "options": [
+          "Standard",
+          "Recommended"
+        ]
       }
     ],
-    "target_url": "https://interval-reminder-remindme.onrender.com/time",
-    "tick_url": "https://interval-reminder-remindme.onrender.com/drink-water"
+    "target_url": "https://be-stage-3.vercel.app/time",
+    "tick_url": "https://be-stage-3.vercel.app/drink-water"
   }
 }
